@@ -1,14 +1,14 @@
-import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from "typeorm";
-import {UsuarioEntity} from "../usuario/usuario.entity";
-import {LugarEntity} from "../lugar/lugar.entity";
+import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
+import {UsuarioEntity} from '../usuario/usuario.entity';
+import {LugarEntity} from '../lugar/lugar.entity';
 @Entity('temperatura')
 export class TemperaturaEntity {
     @PrimaryGeneratedColumn()
-    id:number;
+    id: number;
     @Column()
-    fecha:Date;
+    fecha: Date;
     @Column()
-    valorTemperatura:number;
+    valorTemperatura: number;
     @ManyToOne(type => LugarEntity, lugar => lugar.temperaturas)
-    lugar:LugarEntity;
+    lugar: LugarEntity;
 }
