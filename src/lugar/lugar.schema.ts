@@ -1,6 +1,6 @@
 import * as Joi from 'joi';
 // npm install --save joi
-export const USUARIO_SCHEMA = Joi
+export const LUGAR_SCHEMA = Joi
   .object()
   .keys({
     id: Joi
@@ -9,7 +9,7 @@ export const USUARIO_SCHEMA = Joi
     nombre: Joi
       .string()
       .required()
-      .regex(/^[a-zA-Z]{3,30}$/)
+      .regex(/^[a-zA-Z ]{3,30}$/)
       .min(3)
       .max(30),
   });

@@ -1,1 +1,1 @@
-export declare const USUARIO_SCHEMA: any;
+export declare const LUGAR_SCHEMA: any;

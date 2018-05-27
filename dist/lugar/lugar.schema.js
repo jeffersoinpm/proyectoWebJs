@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const Joi = require("joi");
-exports.USUARIO_SCHEMA = Joi
+exports.LUGAR_SCHEMA = Joi
     .object()
     .keys({
     id: Joi
@@ -10,7 +10,7 @@ exports.USUARIO_SCHEMA = Joi
     nombre: Joi
         .string()
         .required()
-        .regex(/^[a-zA-Z]{3,30}$/)
+        .regex(/^[a-zA-Z ]{3,30}$/)
         .min(3)
         .max(30),
 });

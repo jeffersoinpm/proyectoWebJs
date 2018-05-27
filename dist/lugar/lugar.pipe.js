@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const Joi = require("joi");
 const peticion_invalida_exception_1 = require("../exceptions/peticion-invalida.exception");
-let UsuarioPipe = class UsuarioPipe {
+let LugarPipe = class LugarPipe {
     constructor(schema) {
         this.schema = schema;
     }
@@ -24,9 +24,9 @@ let UsuarioPipe = class UsuarioPipe {
         return valorEnBrutoDelRequest;
     }
 };
-UsuarioPipe = __decorate([
+LugarPipe = __decorate([
     common_1.Injectable(),
     __metadata("design:paramtypes", [Object])
-], UsuarioPipe);
-exports.UsuarioPipe = UsuarioPipe;
+], LugarPipe);
+exports.LugarPipe = LugarPipe;
 //# sourceMappingURL=lugar.pipe.js.map

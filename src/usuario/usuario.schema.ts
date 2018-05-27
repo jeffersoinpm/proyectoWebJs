@@ -15,9 +15,12 @@ export const USUARIO_SCHEMA = Joi
     contrasena: Joi
       .string()
       .alphanum()
-      .min(8),
+      .min(8)
+      .required(),
     correo: Joi
-      .email(),
+      .string()
+      .email()
+      .required(),
     avatar: Joi
       .string(),
   });
