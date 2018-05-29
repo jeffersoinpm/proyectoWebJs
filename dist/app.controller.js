@@ -18,6 +18,8 @@ const usuario_pipe_1 = require("./usuario/usuario.pipe");
 const usuario_schema_1 = require("./usuario/usuario.schema");
 const lugar_pipe_1 = require("./lugar/lugar.pipe");
 const lugar_schema_1 = require("./lugar/lugar.schema");
+const temperatura_schema_1 = require("./temperatura/temperatura.schema");
+const temperatura_pipe_1 = require("./temperatura/temperatura.pipe");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -30,8 +32,12 @@ let AppController = class AppController {
         return usuario;
     }
     crearLugar(lugar) {
-        console.log('Usuario correcto');
+        console.log('Lugar correcto');
         return lugar;
+    }
+    agregarTemperatura(temperatura) {
+        console.log('Temperatura correcta');
+        return temperatura;
     }
 };
 __decorate([
@@ -54,6 +60,13 @@ __decorate([
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearLugar", null);
+__decorate([
+    common_1.Post('AgregarTemperatura'),
+    __param(0, common_1.Body(new temperatura_pipe_1.TemperaturaPipe(temperatura_schema_1.TEMPERATURA_SCHEMA))),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], AppController.prototype, "agregarTemperatura", null);
 AppController = __decorate([
     common_1.Controller(),
     __metadata("design:paramtypes", [app_service_1.AppService])

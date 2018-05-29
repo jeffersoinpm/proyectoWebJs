@@ -5,4 +5,5 @@ export declare class AppController {
     root(): string;
     crearUsuario(usuario: any): any;
     crearLugar(lugar: any): any;
+    agregarTemperatura(temperatura: any): any;
 }

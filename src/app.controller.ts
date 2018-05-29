@@ -4,6 +4,8 @@ import { UsuarioPipe } from './usuario/usuario.pipe';
 import { USUARIO_SCHEMA } from './usuario/usuario.schema';
 import { LugarPipe } from './lugar/lugar.pipe';
 import { LUGAR_SCHEMA } from './lugar/lugar.schema';
+import { TEMPERATURA_SCHEMA } from './temperatura/temperatura.schema';
+import { TemperaturaPipe } from './temperatura/temperatura.pipe';
 
 @Controller()
 export class AppController {
@@ -28,7 +30,16 @@ export class AppController {
     @Body(
       new LugarPipe(LUGAR_SCHEMA)) lugar,
   ) {
-    console.log('Usuario correcto');
+    console.log('Lugar correcto');
     return lugar;
+  }
+
+  @Post('AgregarTemperatura')
+  agregarTemperatura(
+    @Body(
+      new TemperaturaPipe(TEMPERATURA_SCHEMA)) temperatura,
+  ) {
+    console.log('Temperatura correcta');
+    return temperatura;
   }
 }
