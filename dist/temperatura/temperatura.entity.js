@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
-const lugar_entity_1 = require("../lugar/lugar.entity");
+const disposistivolugar_entity_1 = require("../dispositivolugar/disposistivolugar.entity");
 let TemperaturaEntity = class TemperaturaEntity {
 };
 __decorate([
@@ -26,9 +26,9 @@ __decorate([
     __metadata("design:type", Number)
 ], TemperaturaEntity.prototype, "valorTemperatura", void 0);
 __decorate([
-    typeorm_1.ManyToOne(type => lugar_entity_1.LugarEntity, lugar => lugar.temperaturas),
-    __metadata("design:type", lugar_entity_1.LugarEntity)
-], TemperaturaEntity.prototype, "lugar", void 0);
+    typeorm_1.ManyToOne(type => disposistivolugar_entity_1.DisposistivolugarEntity, dispositivolugar => dispositivolugar.temperaturas),
+    __metadata("design:type", disposistivolugar_entity_1.DisposistivolugarEntity)
+], TemperaturaEntity.prototype, "dispositivolugar", void 0);
 TemperaturaEntity = __decorate([
     typeorm_1.Entity('temperatura')
 ], TemperaturaEntity);

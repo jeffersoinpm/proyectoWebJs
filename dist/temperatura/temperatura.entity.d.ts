@@ -1,7 +1,7 @@
-import { LugarEntity } from '../lugar/lugar.entity';
+import { DisposistivolugarEntity } from "../dispositivolugar/disposistivolugar.entity";
 export declare class TemperaturaEntity {
     id: number;
     fecha: Date;
     valorTemperatura: number;
-    lugar: LugarEntity;
+    dispositivolugar: DisposistivolugarEntity;
 }

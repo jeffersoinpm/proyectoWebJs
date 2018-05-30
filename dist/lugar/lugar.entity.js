@@ -11,7 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const typeorm_1 = require("typeorm");
 const usuario_entity_1 = require("../usuario/usuario.entity");
-const temperatura_entity_1 = require("../temperatura/temperatura.entity");
+const tipolugar_entity_1 = require("../tipolugar/tipolugar.entity");
+const disposistivolugar_entity_1 = require("../dispositivolugar/disposistivolugar.entity");
 let LugarEntity = class LugarEntity {
 };
 __decorate([
@@ -27,9 +28,13 @@ __decorate([
     __metadata("design:type", usuario_entity_1.UsuarioEntity)
 ], LugarEntity.prototype, "usuario", void 0);
 __decorate([
-    typeorm_1.OneToMany(type => temperatura_entity_1.TemperaturaEntity, temperatura => temperatura.lugar),
+    typeorm_1.OneToMany(type => disposistivolugar_entity_1.DisposistivolugarEntity, dispositivoslugares => dispositivoslugares.lugar),
     __metadata("design:type", Array)
-], LugarEntity.prototype, "temperaturas", void 0);
+], LugarEntity.prototype, "dispositivolugares", void 0);
+__decorate([
+    typeorm_1.ManyToOne(type => tipolugar_entity_1.TipolugarEntity, tipoLugar => tipoLugar.lugares),
+    __metadata("design:type", tipolugar_entity_1.TipolugarEntity)
+], LugarEntity.prototype, "tipoLugar", void 0);
 LugarEntity = __decorate([
     typeorm_1.Entity('lugar')
 ], LugarEntity);

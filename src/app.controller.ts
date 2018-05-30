@@ -1,11 +1,9 @@
 import { Get, Controller, Post, Body } from '@nestjs/common';
 import { AppService } from './app.service';
-import { UsuarioPipe } from './usuario/usuario.pipe';
 import { USUARIO_SCHEMA } from './usuario/usuario.schema';
-import { LugarPipe } from './lugar/lugar.pipe';
 import { LUGAR_SCHEMA } from './lugar/lugar.schema';
 import { TEMPERATURA_SCHEMA } from './temperatura/temperatura.schema';
-import { TemperaturaPipe } from './temperatura/temperatura.pipe';
+import {GenericoPipe} from "./sesion/generico.pipe";
 
 @Controller()
 export class AppController {
@@ -19,7 +17,7 @@ export class AppController {
   @Post('CrearUsuario')
   crearUsuario(
     @Body(
-      new UsuarioPipe(USUARIO_SCHEMA)) usuario,
+      new GenericoPipe(USUARIO_SCHEMA)) usuario,
   ) {
     console.log('Usuario correcto');
     return usuario;
@@ -28,7 +26,7 @@ export class AppController {
   @Post('CrearLugar')
   crearLugar(
     @Body(
-      new LugarPipe(LUGAR_SCHEMA)) lugar,
+      new GenericoPipe(LUGAR_SCHEMA)) lugar,
   ) {
     console.log('Lugar correcto');
     return lugar;
@@ -37,7 +35,7 @@ export class AppController {
   @Post('AgregarTemperatura')
   agregarTemperatura(
     @Body(
-      new TemperaturaPipe(TEMPERATURA_SCHEMA)) temperatura,
+      new GenericoPipe(TEMPERATURA_SCHEMA)) temperatura,
   ) {
     console.log('Temperatura correcta');
     return temperatura;

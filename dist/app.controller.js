@@ -14,12 +14,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const app_service_1 = require("./app.service");
-const usuario_pipe_1 = require("./usuario/usuario.pipe");
 const usuario_schema_1 = require("./usuario/usuario.schema");
-const lugar_pipe_1 = require("./lugar/lugar.pipe");
 const lugar_schema_1 = require("./lugar/lugar.schema");
 const temperatura_schema_1 = require("./temperatura/temperatura.schema");
-const temperatura_pipe_1 = require("./temperatura/temperatura.pipe");
+const generico_pipe_1 = require("./sesion/generico.pipe");
 let AppController = class AppController {
     constructor(appService) {
         this.appService = appService;
@@ -48,21 +46,21 @@ __decorate([
 ], AppController.prototype, "root", null);
 __decorate([
     common_1.Post('CrearUsuario'),
-    __param(0, common_1.Body(new usuario_pipe_1.UsuarioPipe(usuario_schema_1.USUARIO_SCHEMA))),
+    __param(0, common_1.Body(new generico_pipe_1.GenericoPipe(usuario_schema_1.USUARIO_SCHEMA))),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearUsuario", null);
 __decorate([
     common_1.Post('CrearLugar'),
-    __param(0, common_1.Body(new lugar_pipe_1.LugarPipe(lugar_schema_1.LUGAR_SCHEMA))),
+    __param(0, common_1.Body(new generico_pipe_1.GenericoPipe(lugar_schema_1.LUGAR_SCHEMA))),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)
 ], AppController.prototype, "crearLugar", null);
 __decorate([
     common_1.Post('AgregarTemperatura'),
-    __param(0, common_1.Body(new temperatura_pipe_1.TemperaturaPipe(temperatura_schema_1.TEMPERATURA_SCHEMA))),
+    __param(0, common_1.Body(new generico_pipe_1.GenericoPipe(temperatura_schema_1.TEMPERATURA_SCHEMA))),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [Object]),
     __metadata("design:returntype", void 0)

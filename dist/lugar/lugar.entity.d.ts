@@ -1,8 +1,10 @@
 import { UsuarioEntity } from '../usuario/usuario.entity';
-import { TemperaturaEntity } from '../temperatura/temperatura.entity';
+import { TipolugarEntity } from "../tipolugar/tipolugar.entity";
+import { DisposistivolugarEntity } from "../dispositivolugar/disposistivolugar.entity";
 export declare class LugarEntity {
     id: number;
     nombre: string;
     usuario: UsuarioEntity;
-    temperaturas: TemperaturaEntity[];
+    dispositivolugares: DisposistivolugarEntity[];
+    tipoLugar: TipolugarEntity;
 }

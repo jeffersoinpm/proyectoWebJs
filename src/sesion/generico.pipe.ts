@@ -4,7 +4,7 @@ import * as Joi from 'joi';
 import {PeticionInvalidaException} from '../exceptions/peticion-invalida.exception';
 
 @Injectable()
-export class SesionPipe implements PipeTransform {
+export class GenericoPipe implements PipeTransform {
   constructor(private readonly schema) {}
   transform(
     valorEnBrutoDelRequest: any,

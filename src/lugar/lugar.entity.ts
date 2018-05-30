@@ -1,7 +1,7 @@
 import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {UsuarioEntity} from '../usuario/usuario.entity';
-import {SesionEntity} from '../sesion/sesion.entity';
-import {TemperaturaEntity} from '../temperatura/temperatura.entity';
+import {TipolugarEntity} from "../tipolugar/tipolugar.entity";
+import {DisposistivolugarEntity} from "../dispositivolugar/disposistivolugar.entity";
 @Entity('lugar')
 export class LugarEntity {
     @PrimaryGeneratedColumn()
@@ -10,6 +10,8 @@ export class LugarEntity {
     nombre: string;
     @ManyToOne(type => UsuarioEntity, usuario => usuario.lugares)
     usuario: UsuarioEntity;
-    @OneToMany(type => TemperaturaEntity, temperatura => temperatura.lugar)
-    temperaturas: TemperaturaEntity[];
+    @OneToMany(type => DisposistivolugarEntity, dispositivoslugares=> dispositivoslugares.lugar)
+    dispositivolugares: DisposistivolugarEntity[];
+    @ManyToOne(type => TipolugarEntity, tipoLugar => tipoLugar.lugares)
+    tipoLugar: TipolugarEntity;
 }
