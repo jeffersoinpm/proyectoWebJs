@@ -1,6 +1,6 @@
-import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {UsuarioEntity} from "../usuario/usuario.entity";
-import {DisposistivolugarEntity} from "../dispositivolugar/disposistivolugar.entity";
+import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {UsuarioEntity} from '../usuario/usuario.entity';
+import {DisposistivolugarEntity} from '../dispositivolugar/disposistivolugar.entity';
 
 @Entity('dispositivo')
 export class DispositivoEntity {

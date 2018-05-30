@@ -3,7 +3,7 @@ import { AppService } from './app.service';
 import { USUARIO_SCHEMA } from './usuario/usuario.schema';
 import { LUGAR_SCHEMA } from './lugar/lugar.schema';
 import { TEMPERATURA_SCHEMA } from './temperatura/temperatura.schema';
-import {GenericoPipe} from "./sesion/generico.pipe";
+import {GenericoPipe} from './sesion/generico.pipe';
 
 @Controller()
 export class AppController {

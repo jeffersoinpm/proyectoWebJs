@@ -1,5 +1,5 @@
-import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {LugarEntity} from "../lugar/lugar.entity";
+import {Column, Entity, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {LugarEntity} from '../lugar/lugar.entity';
 
 @Entity('tipolugar')
 export class TipolugarEntity {

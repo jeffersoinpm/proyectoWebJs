@@ -1,5 +1,5 @@
 import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
-import {DisposistivolugarEntity} from "../dispositivolugar/disposistivolugar.entity";
+import {DisposistivolugarEntity} from '../dispositivolugar/disposistivolugar.entity';
 @Entity('temperatura')
 export class TemperaturaEntity {
     @PrimaryGeneratedColumn()

@@ -1,7 +1,7 @@
-import {Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from "typeorm";
-import {LugarEntity} from "../lugar/lugar.entity";
-import {DispositivoEntity} from "../dispositivo/dispositivo.entity";
-import {TemperaturaEntity} from "../temperatura/temperatura.entity";
+import {Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
+import {LugarEntity} from '../lugar/lugar.entity';
+import {DispositivoEntity} from '../dispositivo/dispositivo.entity';
+import {TemperaturaEntity} from '../temperatura/temperatura.entity';
 
 @Entity('dispositivolugar')
 export class DisposistivolugarEntity {
