@@ -1,6 +1,6 @@
 import {Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn} from 'typeorm';
 import {UsuarioEntity} from '../usuario/usuario.entity';
-import {DisposistivolugarEntity} from '../dispositivolugar/disposistivolugar.entity';
+import {DispositivolugarEntity} from '../dispositivolugar/dispositivolugar.entity';
 
 @Entity('dispositivo')
 export class DispositivoEntity {
@@ -10,7 +10,7 @@ export class DispositivoEntity {
     nombre: string;
     @ManyToOne(type => UsuarioEntity, usuario => usuario.lugares)
     usuario: UsuarioEntity;
-    @OneToMany(type => DisposistivolugarEntity, dispositivoslugares=> dispositivoslugares.dispositivo)
-    dispositivolugares: DisposistivolugarEntity[];
+    @OneToMany(type => DispositivolugarEntity, dispositivoslugares=> dispositivoslugares.dispositivo)
+    dispositivolugares: DispositivolugarEntity[];
 
 }

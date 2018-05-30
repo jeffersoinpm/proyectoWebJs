@@ -4,7 +4,7 @@ import {DispositivoEntity} from '../dispositivo/dispositivo.entity';
 import {TemperaturaEntity} from '../temperatura/temperatura.entity';
 
 @Entity('dispositivolugar')
-export class DisposistivolugarEntity {
+export class DispositivolugarEntity {
     @PrimaryGeneratedColumn()
     id: number;
     @ManyToOne(type => LugarEntity, lugar => lugar.dispositivolugares)

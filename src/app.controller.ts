@@ -3,9 +3,10 @@ import { AppService } from './app.service';
 import { USUARIO_SCHEMA } from './usuario/usuario.schema';
 import { LUGAR_SCHEMA } from './lugar/lugar.schema';
 import { TEMPERATURA_SCHEMA } from './temperatura/temperatura.schema';
-import {GenericoPipe} from './sesion/generico.pipe';
 import { DISPOSITIVO_SCHEMA } from './dispositivo/dispositivo.schema';
 import { DISPOSITIVOLUGAR_SCHEMA } from './dispositivolugar/dispositivolugar.schema';
+import { TIPOLUGAR_SCHEMA } from './tipolugar/tipolugar.schema';
+import {GenericoPipe} from './sesion/generico.pipe';
 
 @Controller()
 export class AppController {
@@ -56,6 +57,15 @@ export class AppController {
   agregarDispositivoLugar(
     @Body(
       new GenericoPipe(DISPOSITIVOLUGAR_SCHEMA)) dispositivoLugar,
+  ) {
+    console.log('Dispositivo Lugar correcta');
+    return dispositivoLugar;
+  }
+
+  @Post('AgregarTipoLugar')
+  agregarTipoLugar(
+    @Body(
+      new GenericoPipe(TIPOLUGAR_SCHEMA)) dispositivoLugar,
   ) {
     console.log('Dispositivo Lugar correcta');
     return dispositivoLugar;

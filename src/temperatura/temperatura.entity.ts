@@ -1,5 +1,5 @@
 import {Column, Entity, ManyToOne, PrimaryGeneratedColumn} from 'typeorm';
-import {DisposistivolugarEntity} from '../dispositivolugar/disposistivolugar.entity';
+import {DispositivolugarEntity} from '../dispositivolugar/dispositivolugar.entity';
 @Entity('temperatura')
 export class TemperaturaEntity {
     @PrimaryGeneratedColumn()
@@ -8,6 +8,6 @@ export class TemperaturaEntity {
     fecha: Date;
     @Column()
     valorTemperatura: number;
-    @ManyToOne(type => DisposistivolugarEntity, dispositivolugar => dispositivolugar.temperaturas)
-    dispositivolugar: DisposistivolugarEntity;
+    @ManyToOne(type => DispositivolugarEntity, dispositivolugar => dispositivolugar.temperaturas)
+    dispositivolugar: DispositivolugarEntity;
 }
