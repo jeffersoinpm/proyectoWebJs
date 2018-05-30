@@ -65,9 +65,9 @@ export class AppController {
   @Post('AgregarTipoLugar')
   agregarTipoLugar(
     @Body(
-      new GenericoPipe(TIPOLUGAR_SCHEMA)) dispositivoLugar,
+      new GenericoPipe(TIPOLUGAR_SCHEMA)) tipoLugar,
   ) {
     console.log('Dispositivo Lugar correcta');
-    return dispositivoLugar;
+    return tipoLugar;
   }
 }
