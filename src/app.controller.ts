@@ -4,6 +4,8 @@ import { USUARIO_SCHEMA } from './usuario/usuario.schema';
 import { LUGAR_SCHEMA } from './lugar/lugar.schema';
 import { TEMPERATURA_SCHEMA } from './temperatura/temperatura.schema';
 import {GenericoPipe} from './sesion/generico.pipe';
+import { DISPOSITIVO_SCHEMA } from './dispositivo/dispositivo.schema';
+import { DISPOSITIVOLUGAR_SCHEMA } from './dispositivolugar/dispositivolugar.schema';
 
 @Controller()
 export class AppController {
@@ -39,5 +41,23 @@ export class AppController {
   ) {
     console.log('Temperatura correcta');
     return temperatura;
+  }
+
+  @Post('AgregarDispositivo')
+  agregarDispositivo(
+    @Body(
+      new GenericoPipe(DISPOSITIVO_SCHEMA)) dispositivo,
+  ) {
+    console.log('Dispositivo correcta');
+    return dispositivo;
+  }
+
+  @Post('AgregarDispositivoLugar')
+  agregarDispositivoLugar(
+    @Body(
+      new GenericoPipe(DISPOSITIVOLUGAR_SCHEMA)) dispositivoLugar,
+  ) {
+    console.log('Dispositivo Lugar correcta');
+    return dispositivoLugar;
   }
 }
